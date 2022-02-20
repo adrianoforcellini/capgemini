@@ -4,7 +4,7 @@ const isAnagram = (str1, str2) => {
 
 const verifyNumberOfSubstringsAnagrams = (str) => {
   let stringSize = str.length;
-  let growing = 0;
+  let growing = 1;
   let countingAnagrams = 0;
   let arrayOfSubstrings = [];
   let splited = str.split("");
