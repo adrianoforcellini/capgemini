@@ -1,4 +1,8 @@
-verifyNumberOfSubstringsAnagrams = (str) => {
+const isAnagram = (str1, str2) => {
+  return str1.split("").sort().join("") === str2.split("").sort().join("");
+};
+
+const verifyNumberOfSubstringsAnagrams = (str) => {
   let stringSize = str.length;
   let growing = 1;
   let countingAnagrams = 0;
@@ -13,7 +17,7 @@ verifyNumberOfSubstringsAnagrams = (str) => {
     for (let j = 0; j < stringSize; j++) {
       if (
         str.substr(j, growing).length > 1 &&
-        str.substr(j, growing).length === growing - j
+        str.substr(j, growing).length === growing
       ) {
         arrayOfSubstrings.push(str.substr(j, growing));
       }
@@ -31,5 +35,5 @@ verifyNumberOfSubstringsAnagrams = (str) => {
       }
     }
   }
-  console.log(count);
+  console.log(count / 2);
 };
