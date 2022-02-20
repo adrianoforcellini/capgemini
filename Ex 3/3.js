@@ -1,3 +1,5 @@
+const readline = require("readline-sync");
+
 const isAnagram = (str1, str2) => {
   return str1.split("").sort().join("") === str2.split("").sort().join("");
 };
@@ -24,16 +26,21 @@ const verifyNumberOfSubstringsAnagrams = (str) => {
     }
     growing += 1;
   }
-  console.log(arrayOfSubstrings);
 
   let count = 0;
   for (let k = 0; k < arrayOfSubstrings.length; k++) {
     for (let l = 0; l < arrayOfSubstrings.length; l++) {
       if (isAnagram(arrayOfSubstrings[k], arrayOfSubstrings[l]) && k !== l) {
-        console.log(arrayOfSubstrings[k], arrayOfSubstrings[l]);
         count += 1;
       }
     }
   }
   console.log(count / 2);
 };
+
+verifyNumberOfSubstringsAnagrams(
+  readline.question(
+    `Digite a palavra desejada para saber quantas 
+      da mesma são anagramas entre sí:    `
+  )
+);
