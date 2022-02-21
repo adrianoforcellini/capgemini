@@ -1,5 +1,3 @@
-const readline = require("readline-sync");
-
 const isEspecialCharacter = (letter) => {
   if (
     letter.includes("!") ||
@@ -69,9 +67,4 @@ const verifyPassword = (str) => {
   }
 };
 
-verifyPassword(
-  readline.question(
-    `Digite  sua senha para saber quantos caracteres você precisará 
-    adicionar á ela para que seja uma senha forte:   `
-  )
-);
+module.exports = verifyPassword;
