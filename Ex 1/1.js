@@ -1,6 +1,7 @@
-var readline = require("readline-sync");
+// const readline = require("readline-sync");
 
 const asteriskTriangle = (n) => {
+  lines = [];
   for (let i = 0; i <= n; i++) {
     let line = " ";
     for (let j = n; j >= 0; j--) {
@@ -11,7 +12,11 @@ const asteriskTriangle = (n) => {
       }
     }
     console.log(line);
+    lines.push(line);
   }
+  return lines;
 };
 
-asteriskTriangle(readline.question("Digite um número:   "));
+// asteriskTriangle(readline.question("Digite um número:   "));
+
+module.exports = asteriskTriangle;
