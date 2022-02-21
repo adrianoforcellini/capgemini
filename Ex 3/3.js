@@ -9,18 +9,10 @@ const verifyNumberOfSubstringsAnagrams = (str) => {
   let growing = 1;
   let countingAnagrams = 0;
   let arrayOfSubstrings = [];
-  let splited = str.split("");
-
-  for (let i = 0; i < splited.length; i++) {
-    arrayOfSubstrings.push(splited[i]);
-  }
 
   while (growing < stringSize) {
     for (let j = 0; j < stringSize; j++) {
-      if (
-        str.substr(j, growing).length > 1 &&
-        str.substr(j, growing).length === growing
-      ) {
+      if (str.substr(j, growing).length === growing) {
         arrayOfSubstrings.push(str.substr(j, growing));
       }
     }
