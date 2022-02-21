@@ -62,8 +62,10 @@ const verifyPassword = (str) => {
   }
   if (str.length + count < minLenght) {
     console.log(minLenght - str.length);
+    return minLenght - str.length;
   } else {
     console.log(count);
+    return count;
   }
 };
 
