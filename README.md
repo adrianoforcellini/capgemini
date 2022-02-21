@@ -10,8 +10,12 @@
 
 ### Por fim, podemos testar o funcionamento de cada um dos 3 exercícios:
 
-### node Ex\ 1/1.js
+### node Ex\ 1/Test1.js
 
-### node Ex\ 2/2.js
+### node Ex\ 2/Test2.js
 
-### node Ex\ 3/3.js
+### node Ex\ 3/Test3.js
+
+### Ou ainda, podemos simplesmente rodar os testes unitários com JEST utilizando o comando:
+
+### npm test
