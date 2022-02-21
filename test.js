@@ -1,7 +1,6 @@
 const asteriskTriangle = require("./Ex 1/1.js");
-
 const verifyPassword = require("./Ex 2/2.js");
-console.log(verifyPassword);
+const verifyNumberOfSubstringsAnagrams = require("./Ex 3/3.js");
 
 test("asteriskTriangle cria o triângulo desejado", () => {
   let arr = ["     ", "    *", "   **", "  ***"];
@@ -13,4 +12,9 @@ test("asteriskTriangle cria o triângulo desejado", () => {
 
 test("verifyPassword retorna o valor desejado", () => {
   expect(verifyPassword("Ya3")).toBe(3);
+});
+
+test("verifyNumberOfSubstringsAnagrams retorna os valores desejados", () => {
+  expect(verifyNumberOfSubstringsAnagrams("ovo")).toBe(2);
+  expect(verifyNumberOfSubstringsAnagrams("ifailuhkqq")).toBe(3);
 });
